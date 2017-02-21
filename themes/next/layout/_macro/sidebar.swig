@@ -29,10 +29,14 @@
                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                alt="{{ theme.author }}" />
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
-          <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+           {% if theme.seo %}
+              <p class="site-description motion-element" itemprop="description">{{ theme.signature }}</p>
+           {% else %}
+              <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+          {% endif %}
         </div>
         <nav class="site-state motion-element">
-
+        
           {% if config.archive_dir != '/' %}
             <div class="site-state-item site-state-posts">
               <a href="{{ url_for(theme.menu.archives) }}">
@@ -111,8 +115,7 @@
             </ul>
           </div>
         {% endif %}
-        <!-- 网易云播放器
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=573452686&auto=1&height=90"></iframe>-->
+
         {% include '../_custom/sidebar.swig' %}
 
       </section>

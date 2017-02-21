@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: images/favicon.ico
+favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-since: 2016
+#since: 2015
 
 # icon between year and author @Footer
 authoricon: heart
@@ -37,7 +37,7 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
+  #categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
@@ -70,8 +70,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-scheme: Mist
+scheme: Muse
+#scheme: Mist
 #scheme: Pisces
 
 
@@ -153,7 +153,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: http://oduq3lfcc.bkt.clouddn.com/jingjing.jpg
+#avatar:
 
 
 # Table Of Contents in the Sidebar
@@ -217,7 +217,13 @@ post_meta:
   created_at: true
   updated_at: false
   categories: true
-
+  
+# Post wordcount display settings
+# Dependies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -266,7 +272,7 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: ryland
+#duoshuo_shortname:
 
 # Disqus
 #disqus_shortname:
@@ -280,6 +286,10 @@ duoshuo_shortname: ryland
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
+
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+#livere_uid: your uid
 
 # Baidu Share
 # Available value:
@@ -300,9 +310,12 @@ duoshuo_shortname: ryland
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
-
 # Google Analytics
 #google_analytics:
+
+# Yandex Webmaster tools verification setting
+# See: https://webmaster.yandex.ru/
+#yandex_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
@@ -339,13 +352,22 @@ facebook_comments_plugin:
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
 
+# VKontakte API Support.
+# To get your AppID visit https://vk.com/editapp?act=create
+vkontakte_api:
+  enable: false
+  app_id:       #<app_id>
+  like:         true
+  comments:     true
+  num_of_posts: 10
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
-  app_id: OOVSnaLcReVxqEeLtXFsHfvV-gzGzoHsz
-  app_key: jDjqa1qpF09naqY93L3zgwbH
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -368,6 +390,9 @@ busuanzi_count:
 
 # Tencent analytics ID
 # tencent_analytics:
+
+# Tencent MTA ID
+# tencent_mta: 
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
